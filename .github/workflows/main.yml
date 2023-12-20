@@ -5,6 +5,10 @@ on: workflow_dispatch
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
+permissions:
+  contents: write
+  checks: write
+
 jobs:
   testRunner:
     name: Test in ${{ matrix.testMode }} ✨
